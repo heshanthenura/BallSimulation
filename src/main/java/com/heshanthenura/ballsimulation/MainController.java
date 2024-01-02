@@ -28,12 +28,17 @@ public class MainController implements Initializable {
     @FXML
     private Label yCoord;
 
+    @FXML
+    private Label kinEnergy;
+
+    @FXML
+    private Label potEnergy;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Platform.runLater(()->{
-            new Ball(background,ball,xCoord,yCoord);
+            new Ball(background,ball,xCoord,yCoord,kinEnergy,potEnergy);
         });
     }
 }

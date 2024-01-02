@@ -5,11 +5,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
-
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.heshanthenura.ballsimulation.MainController">
    <children>
-      <AnchorPane fx:id="bottomBorder" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="bottomBorder" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Potential Energy Zero Level">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
       <Circle fx:id="ball" fill="#005cb2" layoutX="468.0" layoutY="278.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <VBox layoutX="516.0" layoutY="23.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
          <children>
@@ -23,6 +36,18 @@
                <children>
                   <Label text="Y Coord:" />
                   <Label fx:id="yCoord" layoutX="10.0" layoutY="10.0" text="0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="27.0" spacing="5.0">
+               <children>
+                  <Label text="Ep:" />
+                  <Label fx:id="potEnergy" layoutX="10.0" layoutY="10.0" text="0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="44.0" spacing="5.0">
+               <children>
+                  <Label fx:id="potentialEnergy1" text="Ek:" />
+                  <Label fx:id="kinEnergy" layoutX="10.0" layoutY="10.0" text="0" />
                </children>
             </HBox>
          </children>
